@@ -149,7 +149,6 @@ header .container .main-nav > li > a {
   animation: left-move 5s linear forwards;
   -webkit-animation: left-move 0.5s linear forwards;
 }
-
 .component::after {
   right: -30px;
 }
@@ -277,7 +276,6 @@ header .container .main-nav li a:hover::before {
   animation: top-down 6s linear infinite;
   -webkit-animation: top-down 6s linear infinite;
 }
-
 @keyframes top-down {
   0%,
   100% {
@@ -326,7 +324,6 @@ header .container .main-nav li a:hover::before {
   -webkit-animation: bouncing 3s infinite;
   bottom: 50px;
 }
-
 @keyframes bouncing {
   0%,
   10%,
@@ -353,7 +350,6 @@ header .container .main-nav li a:hover::before {
 .landing .go-down:hover i {
   color: rgb(49, 0, 228);
 }
-
 /* end landing page  */
 /* start megamenu */
 header .mega-menu {
@@ -545,7 +541,6 @@ header
   -o-transform: translateY(-10px);
   box-shadow: 0 2px 15px rgb(0 0 0 / 20%);
 }
-
 /* .article .container .box:hover{} */
 /* @media (max-width: 1200px) {
   .article .container .box {
@@ -610,7 +605,6 @@ i {
     transform: translateX(10px);
   }
 }
-
 /* end article */
 /* start gallery */
 .gallery {
@@ -645,7 +639,6 @@ i {
 .gallery .container .box:hover::before {
   width: 100%;
   animation: flash 0.3s linear;
- 
 }
 @keyframes flash {
   0% {
@@ -659,28 +652,78 @@ i {
     height: 200%;
   }
 }
-.gallery .container .box .image{
+.gallery .container .box .image {
   overflow: hidden;
- 
 }
 .gallery .container .box .image img {
   width: 100%;
   max-width: 100%;
   transition: all 0.3s;
-
 }
-.gallery .container .box:hover img{
-transform: rotate(5deg) scale(1.2);
+.gallery .container .box:hover img {
+  transform: rotate(5deg) scale(1.2);
 }
-
 /* end gallery */
 /* start features */
 .features {
-  padding:100px 0px;
+  padding: 100px 0px;
   background-color: white;
 }
-.features {}
-
+.features .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+.features .container .box .image-holder {
+  position: relative;
+  overflow: hidden;
+}
+.features .container .box .image-holder::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(3 169 244 / 60%);
+}
+.features .container .box .image-holder::after {
+  content: "";
+  position: absolute;
+  border-style: solid;
+  border-color: transparent transparent white transparent;
+  border-width: 0px 0px 170px 500px;
+  z-index: 2;
+  bottom: 0px;
+  right: 0px;
+}
+.features .container .box .text {
+  text-align: center;
+}
+.features .container .box .text h2 {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 20px;
+  width: fit-content;
+  margin: 0 auto;
+  font-size: 40px;
+}
+.features .container .box .text h2::after {
+  position: absolute;
+  content: "";
+  background-color: var(--main-color);
+  width: calc(100% - 20px);
+  height: 6px;
+  bottom: 0;
+  left: 10px;
+}
+.features .container .box .text p {
+  line-height: 2;
+  color: #777;
+  padding: 25px;
+}
+.features .container .box .image-holder img {
+  width: 100%;
+  max-width: 100%;
+}
 /* end features */
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {

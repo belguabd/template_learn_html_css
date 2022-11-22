@@ -782,14 +782,13 @@ i {
   height: 100%;
   z-index: -1;
   transition: all 1s;
-  
 }
 .features .container .quality:hover a::before {
   animation: fill-bg-red 0.3s linear forwards;
   background-color: var(--card-one) !important;
 }
 .features .container .quality:hover a {
-  color: white ;
+  color: white;
   transition-delay: 0.3s;
 }
 @keyframes fill-bg-red {
@@ -839,6 +838,50 @@ i {
   }
 }
 /* end features */
+/* start testimonials */
+.testimonials {
+  padding: 100px 0;
+  background-color: var(--background-section);
+}
+.testimonials .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+.testimonials .container .card {
+  position: relative;
+  padding:20px;
+  background-color: white;
+  border-radius: 6px ;
+  box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
+}
+.testimonials .container .card img {
+  border-radius: 50%;
+  width: 100px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateY(-50%);
+  border: 10px solid var(--background-section);
+  
+}
+.testimonials .container .card h3 {
+}
+.testimonials .container .card .title {
+  display: block;
+  margin-top: 10px;
+  color: #777;
+}
+.testimonials .container .card .stars .filled {
+  color: orange;
+  margin-top: 10px;
+}
+.testimonials .container .card p {
+  margin-top: 10px;
+  color: #777;
+  line-height: 1.8;
+}
+/* end testimonials */
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
 }

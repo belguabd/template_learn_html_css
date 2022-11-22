@@ -882,6 +882,12 @@ i {
   line-height: 1.8;
 }
 /* end testimonials */
+/* start team */
+.team{
+  padding: 100px 0;
+  background-color: white ;
+}
+/* end team */
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
 }

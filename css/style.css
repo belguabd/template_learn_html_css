@@ -1241,7 +1241,7 @@ p {
   position: relative;
   z-index: 1;
 }
-.pricing .container .card:nth-child(2){
+.pricing .container .card:nth-child(2) {
   transform: translateY(-20px);
 }
 .pricing .container .card::before,
@@ -1265,24 +1265,24 @@ p {
 .pricing .container .card:hover::after {
   width: 100%;
 }
-.pricing .container .card.popular .label{
+.pricing .container .card.popular .label {
   position: absolute;
   writing-mode: vertical-lr;
   background-color: var(--main-color);
-  padding: 5px 5px 35px ;
+  padding: 5px 5px 35px;
   width: 30px;
   color: white;
-font-weight: 400;
-right: 50px;
+  font-weight: 400;
+  right: 50px;
 }
-.pricing .container .card.popular .label::before{
+.pricing .container .card.popular .label::before {
   content: "";
   position: absolute;
-  border-width:15px;
+  border-width: 15px;
   border-style: solid;
   border-color: transparent transparent white transparent;
-bottom: 0;
-left: 0;
+  bottom: 0;
+  left: 0;
 }
 .pricing .container .card .title {
   text-align: center;
@@ -1346,6 +1346,73 @@ left: 0;
   text-align: center;
 } */
 /* end pricing */
+/* start top videos */
+.videos {
+  padding: var(--padding-section) 0;
+}
+.videos .container .behind {
+  display: flex;
+  background-color:#e2e2e2;
+ border: 1px solid #e2e2e2;
+  
+}
+@media (max-width: 992px) {
+  .videos .container .behind {
+    display: flex;
+    flex-direction: column;
+  }
+
+}
+.videos .behind .list-videos {
+  flex: 1;
+  margin-right: 5px;
+}
+.videos .behind .list-videos .title{
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+  font-weight: 600;
+  padding: 20px 16px;
+  background-color: #dee6e4fa;
+}
+.videos .behind .list-videos .title i{
+  color: black;
+  cursor: pointer;
+}
+.videos .behind .list-videos ul{
+  background-color: #f4f4f4;
+}
+.videos .behind .list-videos ul li{
+display: flex;
+flex-direction: column;
+padding: 20px 16px;
+border-top: 1px solid rgb(226, 226, 226) ;
+}
+.videos .behind .list-videos ul li a{
+  color:rgb(37, 32, 32);
+}
+.videos .behind .list-videos ul li span{
+  color: #777;
+}
+.videos .behind .preview {
+  flex: 2;
+  padding: 10px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+row-gap:20px;
+}
+.videos .behind .preview img {
+  width: 100%;
+}
+.videos .behind .preview .info{
+width: 100%;
+background-color: white;
+padding: 20px 16px;
+border-radius: 4px;
+}
+/* end top videos */
+
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
 }

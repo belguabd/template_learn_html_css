@@ -24,9 +24,10 @@ body {
   font-family: "Cairo", sans-serif;
 }
 .container {
-  padding: 0 15px;
-  margin: 0 auto;
-  position: relative;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
 /* Small */
 @media (min-width: 768px) {
@@ -1223,7 +1224,128 @@ p {
   color: white;
 } */
 /* end latest events */
-
+/* start pricing */
+.pricing {
+  padding: var(--padding-section) 0;
+  background-color: var(--background-section);
+}
+.pricing .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 40px;
+}
+.pricing .container .card {
+  background-color: white;
+  box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
+  border-radius: 6px;
+  position: relative;
+  z-index: 1;
+}
+.pricing .container .card:nth-child(2){
+  transform: translateY(-20px);
+}
+.pricing .container .card::before,
+.pricing .container .card::after {
+  content: "";
+  position: absolute;
+  background-color: #f6f6f6;
+  width: 0;
+  height: 50%;
+  transition: all 0.3s;
+  z-index: -1;
+}
+.pricing .container .card::before {
+  left: 0;
+}
+.pricing .container .card::after {
+  right: 0;
+  bottom: 0;
+}
+.pricing .container .card:hover::before,
+.pricing .container .card:hover::after {
+  width: 100%;
+}
+.pricing .container .card.popular .label{
+  position: absolute;
+  writing-mode: vertical-lr;
+  background-color: var(--main-color);
+  padding: 5px 5px 35px ;
+  width: 30px;
+  color: white;
+font-weight: 400;
+right: 50px;
+}
+.pricing .container .card.popular .label::before{
+  content: "";
+  position: absolute;
+  border-width:15px;
+  border-style: solid;
+  border-color: transparent transparent white transparent;
+bottom: 0;
+left: 0;
+}
+.pricing .container .card .title {
+  text-align: center;
+  padding-top: 30px;
+  font-size: 24px;
+  font-weight: bold;
+}
+.pricing .container .card img {
+  width: 80px;
+  margin: 30px auto 0;
+  display: block;
+}
+.pricing .container .card .price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.pricing .container .card .price span:first-child {
+  font-size: 35px;
+  font-weight: bold;
+  color: var(--main-color);
+  margin-top: 20px;
+}
+.pricing .container .card .price span:last-child {
+  margin-top: 5px;
+  color: #777;
+}
+.pricing .container .card ul {
+  margin-top: 20px;
+}
+.pricing .container .card ul li {
+  padding: 15px 10px;
+  width: 100%;
+  border-top: 1px solid rgb(229, 229, 229);
+  position: relative;
+}
+.pricing .container .card ul li::before {
+  font-family: "Font Awesome 5 Free"; /*important */
+  content: "\f00c"; /*important */
+  margin-right: 10px;
+  font-weight: 900; /*important */
+  color: var(--main-color);
+}
+.pricing .container .card a {
+  display: block;
+  margin: 30px auto 30px;
+  width: fit-content;
+  padding: 10px 10px;
+  color: var(--main-color);
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  border: 1px solid var(--main-color);
+  transition: all 0.3s;
+}
+.pricing .container .card a:hover {
+  background-color: var(--main-color);
+  color: white;
+}
+/* .pricing .container :where(.title, img) {
+  text-align: center;
+} */
+/* end pricing */
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
 }

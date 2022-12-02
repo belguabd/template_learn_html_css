@@ -1583,6 +1583,14 @@ p {
 }
 /* end stats */
 /* start footer */
+footer{
+  display: flex;
+  column-gap: 40px;
+}
+footer .image img{
+width: 100px;
+}
+
 /* end footer */
 
 /* Small devices (landscape phones, 576px and up) */

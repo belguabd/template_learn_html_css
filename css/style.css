@@ -1413,7 +1413,7 @@ p {
 /* start stats */
 .stats {
   background-color: var(--background-section);
-  padding: var(--padding-section) 0;
+  padding: var(--padding-section) 0 0;
 }
 .stats .container {
   display: grid;
@@ -1473,8 +1473,8 @@ p {
   display: flex;
   min-height: 100vh;
 }
-@media (max-width:768px) {
-  .stats .content{
+@media (max-width: 768px) {
+  .stats .content {
     display: flex;
     flex-direction: column;
     row-gap: 20px;
@@ -1493,11 +1493,11 @@ p {
   gap: 20px;
 }
 @media (max-width: 576px) {
-  .stats .content .discount { 
+  .stats .content .discount {
     max-width: 100%;
   }
 }
-.stats .content .discount .overlay{
+.stats .content .discount .overlay {
   position: absolute;
   background-color: #2195f3f9;
   width: 100%;
@@ -1505,11 +1505,11 @@ p {
   left: 0;
   z-index: -1;
 }
-.stats .content .discount h2{
+.stats .content .discount h2 {
   font-size: 2rem;
   text-align: center;
-} 
-.stats .content .discount :where(h2 ,p) {
+}
+.stats .content .discount :where(h2, p) {
   color: white;
 }
 .stats .content .discount p {
@@ -1517,7 +1517,6 @@ p {
   line-height: 1.7;
   font-size: 18px;
   max-width: 400px;
- 
 }
 @media (max-width: 576px) {
   .stats .content .discount p {
@@ -1530,24 +1529,23 @@ p {
 }
 @media (max-width: 576px) {
   .stats .content .discount img {
-   
     max-width: 100%;
   }
 }
-.stats .content .contact{
+.stats .content .contact {
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.stats .content .contact form{
+.stats .content .contact form {
   display: flex;
   flex-direction: column;
   padding: 20px;
   row-gap: 16px;
 }
-.stats .content .contact :where(input,textarea) {
+.stats .content .contact :where(input, textarea) {
   padding: 15px;
   outline: none;
   border: none;
@@ -1558,7 +1556,6 @@ p {
   border-radius: 6px;
   font-weight: 600;
   color: var(--main-color);
-  
 }
 .stats .content .contact textarea {
   height: 200px;
@@ -1566,11 +1563,11 @@ p {
   min-width: 400px;
 }
 @media (max-width: 576px) {
-  .stats .content .contact textarea{
+  .stats .content .contact textarea {
     min-width: 300px;
   }
 }
-.stats .content .contact  button{
+.stats .content .contact button {
   padding: 8px;
   outline: none;
   border: none;
@@ -1578,17 +1575,120 @@ p {
   font-size: 16px;
   border-radius: 6px;
   font-weight: 600;
-  color:white;
+  color: white;
   cursor: pointer;
 }
 /* end stats */
 /* start footer */
-footer{
-  display: flex;
-  column-gap: 40px;
+footer {
+  background-color: #191919;
+  padding: 50px 0;
 }
-footer .image img{
-width: 100px;
+
+footer .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 40px;
+}
+@media (max-width: 768px) {
+  footer .container {
+    display: flex;
+flex-direction: column;
+align-items: center;
+
+  }
+ 
+}
+footer .container .media {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+footer .container .media h1 {
+  margin: 0;
+  color: white;
+}
+footer .container .media .social i {
+  color: rgb(228, 224, 224);
+  background-color: rgb(43, 43, 43);
+  padding: 16px;
+  font-size: 24px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+footer .container .media .social i:hover:first-child{
+  background-color:  #1877f2;
+}
+footer .container .media .social i:hover:nth-child(2){
+  background-color:  #c32aa3;
+}
+footer .container .media .social i:hover:last-child{
+  background-color:  #ff0000;
+}
+footer .container .media p {
+  text-align: start;
+  line-height: 1.7;
+  font-size: 18px;
+  color: white;
+}
+footer .container ul li {
+  display: flex;
+  align-items: center;
+  padding: 12px 8px;
+  
+}
+footer .container ul li:not(:last-child) {
+  border-bottom: 1px solid rgb(48, 48, 48);
+}
+
+footer .container ul li i {
+  font-weight: 600;
+  margin-right: 10px;
+  font-size: 16px;
+  transition: all 0.3s;
+  color: var(--main-color);
+
+}
+footer .container ul li:hover i{
+  margin-left: 5px;
+  }
+footer .container ul li a {
+  font-size: 16px;
+  font-weight: 600;
+   color: white;
+}
+footer .container .location{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+footer .container .location .box{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+footer .container .location .box i{
+color: var(--main-color);
+font-size: 24px;
+}
+footer .container .location .box  address{
+line-height: 1.7;
+font-size:18px;
+font-style: normal;
+font-weight: bold;
+ color: white;
+}
+footer .image {
+width: 300px;
+display: flex;
+align-items: center;
+flex-wrap: wrap;
+gap: 5px;
+
+}
+footer .image img {
+  border: 3px solid white;
+ width: 95px;
 }
 
 /* end footer */
